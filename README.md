@@ -18,11 +18,14 @@ security headers as production (`public/_headers`).
 
 ## Deploy
 
+Pushing to `main` deploys automatically: the Netlify site is linked to this repo and publishes
+`public/` (set in `netlify.toml`). Pull requests get a deploy preview.
+
+Manual deploy, if ever needed:
+
 ```
 npx netlify-cli deploy --dir public --prod
 ```
-
-`netlify.toml` sets `public/` as the publish folder, so connecting this repo in Netlify also works.
 
 ## Features
 
