@@ -1,0 +1,6 @@
+{
+  "name": "Streetsong",
+  "avoid": ["Spotify", "Spotify AB", "Freewave", "Free Wave"],
+  "domains": ["spotify.com", "spotifycdn.com", "scdn.co", "spoti.fi"],
+  "colors": ["#1db954", "#1ed760", "#191414", "#121212", "#b3b3b3", "#535353"]
+}

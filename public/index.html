@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Streetsong</title>
+  <meta name="description" content="Free music from independent artists. Search, save favourites, make playlists. No sign-up.">
+  <meta property="og:title" content="Streetsong">
+  <meta property="og:description" content="Free music from independent artists. No sign-up.">
+  <meta property="og:url" content="https://streetsong.netlify.app/">
+  <meta property="og:image" content="https://streetsong.netlify.app/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0f0e0c">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="#/">
+        <span class="brand-mark"></span>
+        <span>Streetsong</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#/" data-route="home"><i data-icon="home"></i><span>Home</span></a>
+        <a href="#/search" data-route="search"><i data-icon="search"></i><span>Search</span></a>
+        <a href="#/liked" data-route="liked" class="mobile-only"><i data-icon="heart"></i><span>Favourites</span></a>
+        <a href="#/queue" data-route="queue"><i data-icon="queue"></i><span>Queue</span></a>
+        <a href="#/local" data-route="local"><i data-icon="folder"></i><span>Local files</span></a>
+      </nav>
+      <section class="library">
+        <header>
+          <h2>Your library</h2>
+          <button class="icon-btn" id="new-playlist" title="Create playlist" aria-label="Create playlist"><i data-icon="plus"></i></button>
+        </header>
+        <ul class="lib-list" id="lib-list"></ul>
+        <a class="legal-link" href="about.html">About · Privacy · Terms</a>
+      </section>
+    </aside>
+
+    <main class="main" id="main" tabindex="-1"></main>
+
+    <footer class="player" id="player">
+      <div class="now">
+        <img class="now-art" id="now-art" alt="">
+        <div class="now-meta">
+          <div class="now-title" id="now-title">Quiet for now</div>
+          <div class="now-artist" id="now-artist">Pick something to play</div>
+        </div>
+        <button class="icon-btn like-btn" id="now-like" aria-label="Like" hidden><i data-icon="heart"></i></button>
+      </div>
+      <div class="controls">
+        <div class="buttons">
+          <button class="icon-btn toggle" id="btn-shuffle" title="Shuffle" aria-label="Shuffle"><i data-icon="shuffle"></i></button>
+          <button class="icon-btn" id="btn-prev" title="Previous" aria-label="Previous"><i data-icon="prev"></i></button>
+          <button class="play-btn" id="btn-play" title="Play (Space)" aria-label="Play"><i data-icon="play"></i></button>
+          <button class="icon-btn" id="btn-next" title="Next" aria-label="Next"><i data-icon="next"></i></button>
+          <button class="icon-btn toggle" id="btn-repeat" title="Repeat" aria-label="Repeat"><i data-icon="repeat"></i></button>
+        </div>
+        <div class="seek">
+          <span id="t-cur">0:00</span>
+          <input type="range" id="seek" min="0" max="1000" value="0" aria-label="Seek">
+          <span id="t-dur">0:00</span>
+        </div>
+      </div>
+      <div class="extras">
+        <a class="icon-btn" href="#/queue" title="Queue" aria-label="Queue"><i data-icon="queue"></i></a>
+        <button class="icon-btn" id="btn-mute" title="Mute" aria-label="Mute"><i data-icon="volume"></i></button>
+        <input type="range" id="volume" min="0" max="100" value="80" aria-label="Volume">
+      </div>
+    </footer>
+  </div>
+
+  <div class="menu" id="menu" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <audio id="audio" preload="auto"></audio>
+  <input type="file" id="file-input" accept="audio/*" multiple hidden>
+
+  <script src="app.js"></script>
+</body>
+</html>

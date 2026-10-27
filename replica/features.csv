@@ -1,0 +1,21 @@
+feature,area,priority,original,clone,notes
+Trending home shelves,browse,must,yes,yes,Audius trending
+Genre browse,browse,should,yes,yes,Audius genre filter
+Search tracks,search,must,yes,yes,Audius search
+Play/pause/seek,player,must,yes,yes,
+Next/previous,player,must,yes,yes,
+Volume and mute,player,must,yes,yes,
+Shuffle,player,should,yes,yes,
+Repeat off/all/one,player,should,yes,yes,
+Queue view,player,should,yes,yes,
+Keyboard shortcuts,player,could,yes,yes,space / arrows / shift+arrows
+Like songs,library,must,yes,yes,localStorage
+Create/rename/delete playlists,library,must,yes,yes,localStorage
+Add/remove track to playlist,library,must,yes,yes,
+Play local files,library,could,yes,yes,not persisted across reloads
+Media Session (OS controls),player,could,yes,yes,
+Responsive mobile layout,shell,should,yes,yes,
+Licensed catalogue,content,skip,yes,skip,licensed - replaced by Audius
+Accounts and social,account,skip,yes,skip,personal app
+Podcasts and lyrics,content,skip,yes,skip,licensed
+Offline downloads,content,skip,yes,skip,
